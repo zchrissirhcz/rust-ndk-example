@@ -28,7 +28,7 @@ export ANDROID_NDK_HOME=${ANDROID_NDK}
 
 # 默认的编译输出目录
 cargo xdk -t arm64-v8a build --release
-adb push target/aarch64-linux-android/release/foo
+adb push target/aarch64-linux-android/release/foo /data/local/tmp/
 adb shell "cd /data/local/tmp; chmod +x ./foo; ./foo"
 
 # 或者： 另行拷贝输出到 jniLibs 目录
